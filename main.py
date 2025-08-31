@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 import os
 from datetime import datetime
 import random
-import webserver
+
 
 load_dotenv()
 token = os.getenv("DISCORD_TOKEN")  
@@ -110,7 +110,7 @@ async def countdown(ctx, seconds: int):
     await ctx.send(f"@everyone Đếm ngược đã kết thúc! {ctx.author.mention}")
 
 
-webserver.keep_alive()
+
 bot.run(token, log_handler=handler, log_level=logging.DEBUG)
 
 
